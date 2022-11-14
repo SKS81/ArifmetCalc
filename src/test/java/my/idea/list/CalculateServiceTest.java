@@ -2,8 +2,32 @@ package my.idea.list;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class CalculateServiceTest {
+
+    @ParameterizedTest
+    @CsvFileSource(files="src/test/resources/data.csv")
+    public void rezParamCSVFile(float expected, float a, float b) {
+        CalculateService service = new CalculateService();
+        float actual = service.get1Plus(a, b);
+        Assertions.assertEquals(expected, actual);
+        System.out.println("Ожидаемый результат > " + expected + " = " + actual + " < Фактический результат");
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "870,230,640",
+            "700.63,250.21,450.42",
+    })
+    public void rez1Param(float expected, float a, float b) {
+        CalculateService service = new CalculateService();
+        float actual = service.get1Plus(a, b);
+        Assertions.assertEquals(expected, actual);
+        System.out.println("Ожидаемый результат > " + expected + " = " + actual + " < Фактический результат");
+    }
 
     @Test
     public void rez1() {

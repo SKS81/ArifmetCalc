@@ -3,7 +3,9 @@ package my.idea.list;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+
         Scanner console = new Scanner(System.in);
         System.out.println("Вас приветствует программа Калькулятор");
         System.out.println();
@@ -15,6 +17,7 @@ public class Main {
         System.out.println("5 - если требуется найти квадратный корень");
         System.out.println("6 - если требуется возвести в степень");
         int change = console.nextInt();
+
         if (change == 1) {
             CalculateService service = new CalculateService();
             System.out.println("Если числа дробные, используйте запятую.");
@@ -27,6 +30,7 @@ public class Main {
             System.out.println("Решение:");
             System.out.println(a + " прибавить " + b + " равно " + rez1);
             System.exit(0);
+
         } if (change == 2) {
             CalculateService service = new CalculateService();
             System.out.println("Если числа дробные, используйте запятую.");
@@ -39,6 +43,7 @@ public class Main {
             System.out.println("Решение:");
             System.out.println(c + " вычесть " + d + " равно " + rez2);
             System.exit(0);
+
         } if (change == 3) {
             CalculateService service = new CalculateService();
             System.out.println("Если числа дробные, используйте запятую.");
@@ -51,6 +56,7 @@ public class Main {
             System.out.println("Решение:");
             System.out.println(i + " умножить " + f + " равно " + rez3);
             System.exit(0);
+
         } if (change == 4) {
             CalculateService service = new CalculateService();
             System.out.println("Если числа дробные, используйте запятую.");
@@ -63,6 +69,7 @@ public class Main {
             System.out.println("Решение:");
             System.out.println(g + " разделить " + h + " равно " + rez4);
             System.exit(0);
+
         } if (change == 5) {
             CalculateService service = new CalculateService();
             System.out.println("Если числа дробные, используйте запятую.");
@@ -72,6 +79,7 @@ public class Main {
             System.out.println("Решение:");
             System.out.println("Квадратный корень из " + j + " равен " + rez5);
             System.exit(0);
+
         } if (change == 6) {
             CalculateService service = new CalculateService();
             System.out.println("Если числа дробные, используйте запятую.");
@@ -83,11 +91,14 @@ public class Main {
             System.out.println("Решение:");
             System.out.println(k + " в степени " + l + " равно " + rez6);
             System.exit(0);
+
         } else {
             System.out.println();
             System.out.println("Вы указали некорректное значение.");
             System.out.println("Перезапустите программу и повторите ввод");
             System.exit(0);
         }
+
     }
+
 }

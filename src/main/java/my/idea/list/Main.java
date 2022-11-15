@@ -16,6 +16,7 @@ public class Main {
         System.out.println("4 - если требуется деление");
         System.out.println("5 - если требуется найти квадратный корень");
         System.out.println("6 - если требуется возвести в степень");
+        System.out.println("7 - выход из программы");
         int change = console.nextInt();
 
         if (change == 1) {
@@ -92,10 +93,13 @@ public class Main {
             System.out.println(k + " в степени " + l + " равно " + rez6);
             System.exit(0);
 
+        } if (change == 7) {
+            System.out.println("Программа завершена.");
+            System.exit(0);
+
         } else {
-            System.out.println();
             System.out.println("Вы указали некорректное значение.");
-            System.out.println("Перезапустите программу и повторите ввод");
+            System.out.println("Перезапустите программу и повторите ввод.");
             System.exit(0);
         }
 
